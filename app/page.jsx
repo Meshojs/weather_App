@@ -12,7 +12,7 @@ const Home = () => {
 
 
 
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid={{{PUT YOUR API KEY}}}`
+    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=c04c97887424717da9b166db0fa68938`
     fetch(url)
         .then((dataJson) => {
             return dataJson.json()
@@ -24,7 +24,7 @@ const Home = () => {
             setLat(lat)
             setLon(lon)
             setCountry(country)
-            const temp = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid={{{PUT YOUR API KEY}}}`;
+            const temp = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=c04c97887424717da9b166db0fa68938`;
             fetch(temp).then((dataJson) => {
                 return dataJson.json()
             }).then((data) => {
